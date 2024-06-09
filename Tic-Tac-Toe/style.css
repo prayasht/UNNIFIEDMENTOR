@@ -1,0 +1,477 @@
+
+body{
+    background-image: url(Tic-Tac-Toe_Background.jpg); 
+    transition: 0.3s;
+}
+.top{
+    height: 60px;
+    width: 400px;
+    background-color: aliceblue;
+    margin-left: 35%;
+    text-align: center;
+    font-size: 3em;
+    border-radius: 30px;
+}
+.game-container{
+    background-color: rgb(216, 218, 255);
+    border: 3px solid rgb(216, 218, 255);
+    display: grid;
+    place-items: center;
+    height: 450px;
+    width:450px;
+    grid-template-columns: repeat(3, 1fr); 
+    position: absolute;
+    top :27%;
+    left: 12%;
+    box-shadow: 3px floralwhite;
+    transition: 0.3s ;
+    
+}
+.game-container button{
+    border: 2px solid rgb(233, 233, 253);
+    border-spacing: 2px;
+    background-color: rgb(116, 116, 162);
+    height: 150px;
+    width: 150px;
+    font-size: 135px;
+    color: white;
+    -webkit-text-stroke: 3px rgb(255, 145, 193) ;
+    text-shadow: 3px 0 rgb(255, 216, 250), -3px 0 rgb(255, 216, 250), 0 3px rgb(255, 216, 250), 0 -3px rgb(255, 216, 250) 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    transition: 0.3s;
+    transition: transform 250ms;
+
+}
+.game-container button:hover{
+    background-color:rgb(151, 151, 255);
+    transform: scale(0.95);
+    border-radius: 15px;
+}
+#p1{
+    position: absolute;
+    left: 2%;
+    top:16%;
+    height: 60px;
+    width: 380px;
+    border: 3px solid rgb(233, 233, 253);
+}
+ #p1 #tic{
+position: relative;
+width: 20%;
+height: 100%;
+background-color: rgb(116, 116, 162);  
+border-right: 3px solid rgb(233, 233, 253);
+}
+#p1 #tic .x{
+font-size: 110px;
+color: white;
+-webkit-text-stroke:   1px rgb(255, 145, 193) ; 
+text-shadow: 3px 0 rgb(255, 216, 250), -3px 0 rgb(255, 216, 250) ;
+position: relative;
+top: -35px;
+left: -5px;
+}
+#p1 #p1name{
+position: absolute;
+left: 20.6%;
+top:-48px;
+font-size: 3em;
+text-align: center;
+height: 100%;
+width: 79.2%;
+}
+#p2{
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    height: 60px;
+    width: 380px;
+    border: 3px solid rgb(233, 233, 253);
+} 
+#p2 #tac{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background-color:rgb(116, 116, 162);  
+    border-right: 3px solid rgb(233, 233, 253);
+}
+#p2 #tac .o{
+    font-size: 95px;
+    color: white;
+    -webkit-text-stroke:   1px rgb(255, 145, 193) ; 
+    text-shadow: 3px 0 rgb(255, 216, 250), -3px 0 rgb(255, 216, 250) ;
+    position: absolute;
+    bottom: -17px;
+    left:7px;
+    }
+   #p2 #p2name{
+    text-align: center;
+    background-color: rgb(179, 173, 211);
+    height: 100%;
+    width: 79.2%;
+    position: absolute;
+    left: 20.8%;
+    bottom: -48px;
+    font-size: 3em;
+    }
+.resultboard{ 
+    height: 300px;
+    width: 600px;
+    background-color: rgb(123, 123, 184);
+    position: absolute;
+    left: 52%;
+    top:18%;
+    }
+.resultboard .resulthead{
+    background-color: #fff;
+    height: 18%;
+    width: 400px;
+    position: relative;
+    top: 3%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+
+    }
+.image1 {
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    background-image: url(border3.jpg);
+    height: 300px;
+    width: 77px;
+}
+.image2 {
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    background-image: url(border3.jpg);
+    height: 300px;
+    width: 77px;
+}
+#textway{
+    background-color: azure;
+    height: 200px;
+    width: 400px ;
+    position: absolute;
+    left: 17%;
+    bottom: 3%;
+    font-size: 2.5em;
+    text-align: center;
+}
+.menu{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    position: absolute;
+    left: 60%;
+    top:60%;
+
+}
+.menu button{
+    height: 80px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 1.5em;
+    background-color: rgb(233, 233, 253);
+    transform: transform 300ms;
+}
+.menu button:hover{
+    background-color: rgb(194, 194, 255);
+    transform: scale(1.1);
+    border-radius: 25px;
+}
+hr{
+    position: fixed;
+    width : 100%;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 19px;
+}
+@media(max-width:1200px){
+  
+    .top{
+        font-size: 2em;
+        position: fixed;
+        top:1%;
+        right:10%;
+        width: 80%;
+        height: 6%;
+     }
+     hr{
+        position: fixed;
+        top: 7%;
+        left: 0px;
+        width: 150%;
+     }
+     #p1{
+        position: fixed;
+        left: 0%;
+        top: 11%;
+        max-width: 280px;
+        max-height: 50px;
+    }
+    #p1 #tic .x{
+        left: 3px;
+        position: absolute;
+        height: 100%;
+        top: -15px;
+        font-size: 500%;
+     }
+     .game-container{
+        position: fixed;
+        left: 6%;
+        top: 23%;
+        max-height: 65%;
+     }
+     .game-container button{
+        height: 100%;
+        width: 100%;
+        font-size: 3em;
+     }
+     #p2{
+        position: fixed;
+        left: 28%;
+        top:90%;
+        max-height: 50px;
+        max-width: 280px;
+    }
+    #p2 #tac .o{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: -20px;
+        left: 5px;
+        font-size: 500%;
+     }
+
+
+}
+@media(max-width:1025px){
+    .game-container{
+        left: 0%;
+    }
+}
+@media(max-width : 870px){
+    body{
+        background-repeat: no-repeat;
+        background-size: cover ;
+        background-attachment: fixed;
+        background-position: 80% 80%;
+     }
+     .top{
+        font-size: 2em;
+        position: fixed;
+        top:1%;
+        right:10%;
+        width: 80%;
+        height: 5%;
+     }
+     hr{
+        position: fixed;
+        top: 6%;
+        left: 0px;
+        width: 150%;
+     }
+     .resultboard{
+        top: 14%;
+        max-height: 40%;
+        max-width: 70%;
+     }
+     .resultboard  .resulthead{
+        font-size: 1.3em;
+         position: absolute;
+        left: 15%;
+        top: 4%;
+        width: 70%;
+        height: 15%;
+        }
+     .resultboard #textway{
+        position: absolute;
+        left: 15%;
+        top: 24%;
+        width: 70%;
+        height: 70%;
+        font-size: 1.7em;
+     }
+     .resultboard .image1{
+        position: absolute;
+        left: 7px;
+        width: 13%;
+        height: 100%;
+     }
+     .resultboard .image2{
+        position: absolute;
+        right: 0%;
+        width: 13%;
+        height: 100%;
+     }
+     .menu{
+        position: fixed;
+        left: 7%;
+        top: 4%;
+     }
+#p1{
+    position: fixed;
+    left: 0%;
+    top: 39%;
+    max-width: 280px;
+    max-height: 50px;
+}
+#p1 #tic .x{
+    position: absolute;
+    height: 100%;
+    top: -15px;
+    font-size: 500%;
+ }
+.game-container{
+    position: fixed;
+    top: 47%;
+    max-height: 350px;
+}
+.game-container button{
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+ }
+#p2{
+    position: fixed;
+    left: 35%;
+    top:92%;
+    max-height: 50px;
+}
+#p2 #tac .o{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: -20px;
+    left: 5px;
+    font-size: 500%;
+ }
+     
+}
+@media(max-width : 500px) {
+    body{
+        background-repeat: no-repeat;
+        background-size: cover ;
+        background-attachment: fixed;
+        background-position: 97% 90%;
+     }
+     .top{
+        font-size: 2em;
+        position: fixed;
+        top:1%;
+        right:10%;
+        width: 80%;
+        height: 8%;
+     }
+     hr{
+        position: fixed;
+        top: 9%;
+        left: 0px;
+        width: 100%;
+     }
+     .resultboard{
+        position: fixed;
+        left: 0%;
+        top: 12%;
+        max-width: 100%;
+        height: 20%;
+     }
+    .resultboard  .resulthead{
+        font-size: 1.3em;
+         position: absolute;
+        left: 15%;
+        top: 4%;
+        width: 70%;
+        height: 15%;
+        }
+     .resultboard #textway{
+        position: absolute;
+        left: 15%;
+        top: 24%;
+        width: 70%;
+        height: 70%;
+        font-size: 1.5;
+     }
+     .resultboard .image1{
+        position: absolute;
+        left: 0px;
+        width: 15%;
+        height: 100%;
+     }
+     .resultboard .image2{
+        position: absolute;
+        right: 0%;
+        width: 13%;
+        height: 100%;
+     }
+     #p1{
+        position: fixed;
+        top: 33%;
+        left: 0%;
+        height: 6%;
+        max-width: 70%;
+    }
+    #p1 #p1name{
+        position: absolute;
+        top: -30px;
+        font-size: 2em;
+    }
+     #p1 #tic .x{
+        position: absolute;
+        height: 100%;
+        top: -20px;
+        font-size: 500%;
+     }
+
+     .game-container{
+        position: fixed;
+        width: 90%;
+        height: 40%;
+        top: 41%;
+        left: 5%;
+    }
+    .game-container button{
+       height: 100%;
+       width: 100%;
+       max-height: 100%;
+       font-size: 2em;
+    }
+    #p2{
+        position: fixed;
+        top: 83%;
+        left: 12%;
+        height: 6%;
+        max-width: 70%;
+    }
+    #p2 #p2name{
+        position: absolute;
+        top: -35px;
+        font-size: 2.2em;
+    }
+     #p2 #tac .o{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: -25px;
+        left: 5px;
+        font-size: 500%;
+     }
+     .menu{
+        position: fixed;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 85%;
+        left: 10%;
+     }
+     .menu button{
+        font-size: 1em;
+        height: 7%;
+        width: 100%;
+        min-height:35px ;
+     }
+     
+    
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tictactoe.js"></script>
+</head>
+<body>
+    <div class="top">
+        TIC-TAC-TOE
+    </div>
+    <hr>
+    <div class="game-container">
+        <button id="0" onclick="mark(0)"></button>
+        <button id="1" onclick="mark(1)"></button>
+        <button id="2" onclick="mark(2)"></button>
+        <button id="3" onclick="mark(3)"></button>
+        <button id="4" onclick="mark(4)"></button>
+        <button id="5" onclick="mark(5)"></button>
+        <button id="6" onclick="mark(6)"></button>
+        <button id="7" onclick="mark(7)"></button>
+        <button id="8" onclick="mark(8)"></button>
+    </div>
+    <div class="menu">
+        <button onclick="newGame()">New Game</button>
+        <button onclick="clearGame()">Clear Game</button>
+    </div>
+    <div class="player" id="p1">
+        <button id="tic" onclick="changename(p1name)"><div class="x">&times;</div></button>
+        <p id="p1name"> Player 1</p>
+    </div>
+    <div class="player" id="p2">
+        <button id="tac" onclick="changename(p2name)"><div class="o">o</div></button>
+        <p id="p2name"> Player 2</p>
+    </div>
+    <div class="resultboard">
+        <p class="resulthead">Result Board:</p>
+        <div class="image1"></div>
+        <div id="textway"></div>
+        <div class="image2"></div>
+    </div>
+</body>
+</html>
